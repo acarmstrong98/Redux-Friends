@@ -22,7 +22,7 @@ function reducer (state = initialState, action) {
             ...state,
             fetchingFriends: true,
             error:
-                "Error"
+                "Loading..."
         }
 
         case FETCHING_SUCCESS:
@@ -30,7 +30,7 @@ function reducer (state = initialState, action) {
             ...state,
             friends: action.payload,
             fetchingFriends: false,
-            error: ""
+            error: "Success!"
         }
 
         case FETCHING_FAILURE:

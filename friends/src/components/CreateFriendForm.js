@@ -15,15 +15,16 @@ class CreateFriendForm extends React.Component {
         this.setState({ [event.target.name]: event.target.value })
     }
 
-    handleClick = () => {
+    handleSubmit = event => {
+        event.preventDefault();
 
     }
 
     render() {
         return (
             <div>
-                <form>
-                    
+                <form onSubmit={this.handleSubmit}>
+
                     <input 
                         onChange={this.handleChange}
                         name="name"
@@ -48,9 +49,9 @@ class CreateFriendForm extends React.Component {
                         placeholder="Email"
                     />
 
-                </form>
+                    <button type="submit">Click Me</button>
 
-                <button onClick={this.handleClick}>Click Me</button>
+                </form>   
 
             </div>
         )
